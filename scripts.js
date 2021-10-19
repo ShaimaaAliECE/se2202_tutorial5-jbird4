@@ -1,6 +1,9 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
 let cells = document.querySelectorAll('td');
 let btn = `<button id='btn'>[ ]</button>`;
+let nextPlayerLable = document.querySelector('#next-lbl');
+nextPlayerLable.innerHTML = nextPlayer;
+let disable = 0;
 
 
 //initialize the game
@@ -33,19 +36,23 @@ for (let i=0; i<btns.length; i++)
 // This function will be used to respond to a click event on any of the board buttons.
 function takeCell(event){
 
-    
+    let button = event.target;
 
    if(nextPlayer === 'X'){
-    let button = event.target;
+    
         button.innerText = '[X]';
         button.disabled = true;
         nextPlayer = 'O';
+        nextPlayerLable.innerHTML=nextPlayerLable;
+        disable++;
 
  }else if (nextPlayer === 'O'){
-    let button = event.target;
+
      button.innerText = '[O]';
      button.disabled = true;
      nextPlayer = 'X';
+     nextPlayerLable.innerHTML=nextPlayer;
+     disable++
  }
     /*
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
@@ -57,10 +64,11 @@ function takeCell(event){
     if (isGameOver())
     {
 
-        let lable = document.querySelectorAll('#game-over-lbl');
+        let lable = document.querySelector('#game-over-lbl');
         // let the lable with the id 'game-over-lbl' display the words 'Game Over' inside <h1> element\
 
-        lable.innerText("Game Over");
+        lable.innerHTML = "Game Over";
+        
     
     }
 
@@ -69,7 +77,7 @@ function takeCell(event){
 
 function isGameOver()
 {
-    if((btns.disabled = true) === true){
+    if(disable === 9){
         return true;
     }else{
         return false;
