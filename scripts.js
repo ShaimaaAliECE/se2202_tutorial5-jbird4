@@ -35,10 +35,9 @@ for (let i=0; i<btns.length; i++)
 function takeCell(event){
 
     let button = event.target;
-    let nextPlayerLable = document.querySelector('#next-lbl');
 
    if(nextPlayer === 'X'){
-    
+    let nextPlayerLable = document.querySelector('#next-lbl');
         button.innerText = '[X]';
         button.disabled = true;
         nextPlayer = 'O';
@@ -46,7 +45,7 @@ function takeCell(event){
         disable++;
 
  }else if (nextPlayer === 'O'){
-
+    let nextPlayerLable = document.querySelector('#next-lbl');
      button.innerText = '[O]';
      button.disabled = true;
      nextPlayer = 'X';
