@@ -13,7 +13,7 @@ function createGameBoard()
     let btn = 
         <button id='game_btn'>X</button>;
     
-        let boxes = document.querySelectorAll('td');
+        let boxes = document.querySelectorAll('.buttonInTable');
 
         for(let i = 0; i<boxes.length; i++){
 
