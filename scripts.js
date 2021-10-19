@@ -1,17 +1,26 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
 
 //initialize the game
+
+
 // use the value stored in the nextPlayer variable to indicate who the next player is
-let TicTacToeGame = new TicTacToeGame();
-
-TicTacToeGame.start();
-
 
 //This call will create the buttons needed for the gameboard.
 createGameBoard()
 
 function createGameBoard()
 {
+    let btn = 
+        <button id='game_btn'>X</button>;
+    
+        let boxes = document.querySelectorAll('td');
+
+        for(let i = 0; i<boxes.length; i++){
+
+            boxes[i].innerHTML = btn;
+
+        }
+    
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
    
 }
