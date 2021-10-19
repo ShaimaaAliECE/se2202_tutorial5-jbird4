@@ -39,7 +39,7 @@ let button = event.target;
         button.innerText = '[X]';
         nextPlayer = 'O';
 
- }else{
+ }else if (nextPlayer === 'O'){
      button.innerText = '[O]';
      nextPlayer = 'X';
  }
