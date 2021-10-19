@@ -1,8 +1,6 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
 let cells = document.querySelectorAll('td');
 let btn = `<button id='btn'>[ ]</button>`;
-let nextPlayerLable = document.querySelector('#next-lbl');
-nextPlayerLable.innerHTML = 'O';
 let disable = 0;
 
 
@@ -37,6 +35,7 @@ for (let i=0; i<btns.length; i++)
 function takeCell(event){
 
     let button = event.target;
+    let nextPlayerLable = document.querySelector('#next-lbl');
 
    if(nextPlayer === 'X'){
     
@@ -45,7 +44,7 @@ function takeCell(event){
         nextPlayer = 'O';
         nextPlayerLable.innerHTML='X';
         disable++;
-        
+
  }else if (nextPlayer === 'O'){
 
      button.innerText = '[O]';
