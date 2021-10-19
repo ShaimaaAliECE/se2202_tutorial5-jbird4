@@ -1,4 +1,6 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
+let cells = document.querySelectorAll('td');
+let btn = `<button id='btn'>X</button>`;
 
 //initialize the game
 
@@ -10,10 +12,6 @@ createGameBoard()
 
 function createGameBoard()
 {
-  
-    let cells = document.querySelectorAll('#c2');
-    let btn = `<button id='btn'>X</button>`;
-
 
     for(let i = 0; i<cells.length; i++){
 
