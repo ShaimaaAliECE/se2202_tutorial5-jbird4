@@ -57,10 +57,11 @@ function takeCell(event){
     if (isGameOver())
     {
 
-        let lable = `<lable id='game-over-lbl'>Game Over</button>`
+        let lable = document.querySelectorAll('#game-over-lbl');
         // let the lable with the id 'game-over-lbl' display the words 'Game Over' inside <h1> element\
 
-        lable.show();
+        lable.innerText("Game Over");
+    
     }
 
     // I'll leave declaring the winner for your intrinsic motivation, it's not required for this assignment 
