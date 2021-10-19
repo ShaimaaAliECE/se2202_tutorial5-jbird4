@@ -1,5 +1,6 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
 let cells = document.querySelectorAll('td');
+let btn = `<button id='btn'>[ ]</button>`;
 
 
 //initialize the game
@@ -13,8 +14,6 @@ function createGameBoard()
 {
 
     for(let i = 0; i<cells.length; i++){
-
-        let btn = `<button id='btn'>[ ]</button>`;
 
          cells[i].innerHTML = btn;
 
@@ -34,6 +33,13 @@ for (let i=0; i<btns.length; i++)
 // This function will be used to respond to a click event on any of the board buttons.
 function takeCell(event)
 {
+if(nextPlayer === 'X'){
+    btn = `<button id='btn'>X</button>`;
+    nextPlayer = 'O';
+}else{
+    btn =  `<button id='btn'>X</button>`;
+    nextPlayer = 'X';
+}
     /*
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
     */
