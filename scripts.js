@@ -56,7 +56,11 @@ function takeCell(event){
     // Check if the game is over
     if (isGameOver())
     {
-        // let the lable with the id 'game-over-lbl' display the words 'Game Over' inside <h1> element
+
+        let lable = `<lable id='game-over-lbl'>Game Over</button>`
+        // let the lable with the id 'game-over-lbl' display the words 'Game Over' inside <h1> element\
+
+        lable.show();
     }
 
     // I'll leave declaring the winner for your intrinsic motivation, it's not required for this assignment 
@@ -64,6 +68,11 @@ function takeCell(event){
 
 function isGameOver()
 {
+    if((btns.disabled = true) === true){
+        return true;
+    }else{
+        return false;
+    }
     // This function returns true if all the buttons are disabled and false otherwise 
    
 }
