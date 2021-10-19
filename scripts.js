@@ -13,10 +13,10 @@ function createGameBoard()
 {
 
     for(let i = 0; i<cells.length; i++){
-        
+
         let btn = `<button id='btn'>[ ]</button>`;
 
-       cells[i].innerHTML = btn;
+         cells[i].innerHTML = btn;
 
    }
     
@@ -25,7 +25,7 @@ function createGameBoard()
 }
 
 // Programatically add 'takeCell' as an event listener to all the buttons on the board
-let btns = document.querySelectorAll('button');
+let btns = document.querySelectorAll('btn');
 for (let i=0; i<btns.length; i++)
 {
     btns[i].addEventListener('click', (event) => { takeCell(event)});
