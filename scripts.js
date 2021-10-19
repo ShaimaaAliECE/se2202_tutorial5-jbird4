@@ -67,7 +67,6 @@ function takeCell(event){
 
         lable.innerHTML = "Game Over";
         
-    
     }
 
     // I'll leave declaring the winner for your intrinsic motivation, it's not required for this assignment 
