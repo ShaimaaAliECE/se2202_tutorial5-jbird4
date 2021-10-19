@@ -11,7 +11,7 @@ function createGameBoard()
 {
 
 let cells = document.querySelectorAll('td');
-let btn = `<button id='btn'>X</button>`;
+let btn = `<button id='btn'>[ ]</button>`;
 
     for(let i = 0; i<cells.length; i++){
 
