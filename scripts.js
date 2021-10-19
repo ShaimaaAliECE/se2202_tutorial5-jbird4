@@ -33,14 +33,16 @@ for (let i=0; i<btns.length; i++)
 // This function will be used to respond to a click event on any of the board buttons.
 function takeCell(event){
 
-    let button = event.target;
+    
 
    if(nextPlayer === 'X'){
+    let button = event.target;
         button.innerText = '[X]';
         button.disabled = true;
         nextPlayer = 'O';
 
  }else if (nextPlayer === 'O'){
+    let button = event.target;
      button.innerText = '[O]';
      button.disabled = true;
      nextPlayer = 'X';
