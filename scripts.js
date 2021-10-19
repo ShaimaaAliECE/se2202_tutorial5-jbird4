@@ -34,12 +34,12 @@ for (let i=0; i<btns.length; i++)
 function takeCell(event){
 
 let button = event.target;
-   // if(nextPlayer === 'X'){
+   if(nextPlayer === 'X'){
 
-    button.innerText = 'X';
-
-    
-   // }
+    button.innerText = '[X]';
+ }else{
+     button.innerText = '[O]';
+ }
     /*
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
     */
