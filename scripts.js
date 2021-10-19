@@ -45,7 +45,7 @@ function takeCell(event){
         nextPlayer = 'O';
         nextPlayerLable.innerHTML='X';
         disable++;
-
+        
  }else if (nextPlayer === 'O'){
 
      button.innerText = '[O]';
