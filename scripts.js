@@ -31,15 +31,13 @@ for (let i=0; i<btns.length; i++)
 }
 
 // This function will be used to respond to a click event on any of the board buttons.
-function takeCell(event)
-{
-if(nextPlayer === 'X'){
-    btn = `<button id='btn'>X</button>`;
-    nextPlayer = 'O';
-}else{
-    btn =  `<button id='btn'>X</button>`;
-    nextPlayer = 'X';
-}
+function takeCell(event){
+    let clickedBtn = event.target;
+
+    if(nextPlayer === 'X'){
+
+        clickedBtn.innerText = "X";
+    }
     /*
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
     */
