@@ -2,7 +2,7 @@ let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the gam
 let cells = document.querySelectorAll('td');
 let btn = `<button id='btn'>[ ]</button>`;
 let nextPlayerLable = document.querySelector('#next-lbl');
-nextPlayerLable.innerHTML = nextPlayer;
+nextPlayerLable.innerHTML = 'O';
 let disable = 0;
 
 
@@ -43,7 +43,7 @@ function takeCell(event){
         button.innerText = '[X]';
         button.disabled = true;
         nextPlayer = 'O';
-        nextPlayerLable.innerHTML=nextPlayer;
+        nextPlayerLable.innerHTML='X';
         disable++;
 
  }else if (nextPlayer === 'O'){
@@ -51,7 +51,7 @@ function takeCell(event){
      button.innerText = '[O]';
      button.disabled = true;
      nextPlayer = 'X';
-     nextPlayerLable.innerHTML=nextPlayer;
+     nextPlayerLable.innerHTML= 'O';
      disable++
  }
     /*
