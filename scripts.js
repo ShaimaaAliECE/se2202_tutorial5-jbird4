@@ -1,6 +1,6 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
 let cells = document.querySelectorAll('td');
-let btn = `<button id='btn'>[ ]</button>`;
+let btn = `<button id='btn'>X</button>`;
 
 //initialize the game
 
