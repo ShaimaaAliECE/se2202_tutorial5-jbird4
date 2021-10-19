@@ -34,13 +34,15 @@ for (let i=0; i<btns.length; i++)
 function takeCell(event){
 
     let button = event.target;
-    
+
    if(nextPlayer === 'X'){
         button.innerText = '[X]';
+        button.disabled = true;
         nextPlayer = 'O';
 
  }else if (nextPlayer === 'O'){
      button.innerText = '[O]';
+     button.disabled = true;
      nextPlayer = 'X';
  }
     /*
