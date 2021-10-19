@@ -2,7 +2,6 @@ let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the gam
 
 //initialize the game
 
-
 // use the value stored in the nextPlayer variable to indicate who the next player is
 
 //This call will create the buttons needed for the gameboard.
@@ -11,7 +10,7 @@ createGameBoard()
 function createGameBoard()
 {
     let cells = document.querySelectorAll('td');
-    let btn = `<button id='btn'>[]</button>`;
+    let btn = `<button id='btn'>O</button>`;
 
     for(let i = 0; i<cells.length; i++){
 
