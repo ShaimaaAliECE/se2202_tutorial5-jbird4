@@ -11,7 +11,6 @@ createGameBoard()
 
 function createGameBoard()
 {
-    
 
     for(let i = 0; i<cells.length; i++){
 
